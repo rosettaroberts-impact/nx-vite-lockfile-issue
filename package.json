@@ -2,9 +2,9 @@
   "name": "@nx-vite-lockfile-issue/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
   "private": true,
   "dependencies": {
+    "@growthbook/growthbook": "^0.27.0",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
@@ -31,5 +31,12 @@
     "vite": "^4.3.9",
     "vite-tsconfig-paths": "^4.2.0",
     "vitest": "^0.32.0"
+  },
+  "volta": {
+    "node": "18.16.1",
+    "yarn": "3.6.1"
+  },
+  "resolutions": {
+    "@growthbook/growthbook@^0.27.0": "patch:@growthbook/growthbook@npm%3A0.27.0#./.yarn/patches/@growthbook-growthbook-npm-0.27.0-3197004b39.patch"
   }
 }

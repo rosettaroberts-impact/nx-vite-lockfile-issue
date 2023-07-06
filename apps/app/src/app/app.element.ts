@@ -4,7 +4,7 @@ export class AppElement extends HTMLElement {
   public static observedAttributes = [];
 
   connectedCallback() {
-    const title = 'undefined';
+    const title = 'app';
     this.innerHTML = `
     <div class="wrapper">
       <div class="container">

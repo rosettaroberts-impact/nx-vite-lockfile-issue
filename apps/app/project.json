@@ -1,8 +1,8 @@
 {
-  "name": "undefined",
+  "name": "app",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/undefined/src",
+  "sourceRoot": "apps/app/src",
   "tags": [],
   "targets": {
     "build": {
@@ -10,7 +10,8 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/apps/undefined"
+        "outputPath": "dist/apps/app",
+        "generatePackageJson": true
       },
       "configurations": {
         "development": {
@@ -25,15 +26,15 @@
       "executor": "@nx/vite:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "undefined:build"
+        "buildTarget": "app:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "undefined:build:development",
+          "buildTarget": "app:build:development",
           "hmr": true
         },
         "production": {
-          "buildTarget": "undefined:build:production",
+          "buildTarget": "app:build:production",
           "hmr": false
         }
       }
@@ -42,30 +43,30 @@
       "executor": "@nx/vite:preview-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "undefined:build"
+        "buildTarget": "app:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "undefined:build:development"
+          "buildTarget": "app:build:development"
         },
         "production": {
-          "buildTarget": "undefined:build:production"
+          "buildTarget": "app:build:production"
         }
       }
     },
     "test": {
       "executor": "@nx/vite:test",
-      "outputs": ["coverage/apps/undefined"],
+      "outputs": ["coverage/apps/app"],
       "options": {
         "passWithNoTests": true,
-        "reportsDirectory": "../../coverage/apps/undefined"
+        "reportsDirectory": "../../coverage/apps/app"
       }
     },
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/undefined/**/*.ts"]
+        "lintFilePatterns": ["apps/app/**/*.ts"]
       }
     }
   }
